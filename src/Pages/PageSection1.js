@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
     top:"50%",
     left:"50%",
     transform: "translate(-50%, -50%)",
-    color:"white"
-   
+    color:"white",
+    fontFamily:"sans-serif"
   },
   heroText2: {
     textAlign:"bottom",
@@ -49,8 +49,12 @@ const useStyles = makeStyles((theme) => ({
     top:"80%",
     left:"50%",
     transform: "translate(-50%, -50%)",
-    color:"white"
+    color:"white",
+    fontFamily:"sans-serif"
    
+  },
+  Typo:{
+    fontFamily:"sans-serif"
   }
 
 }));
@@ -97,10 +101,10 @@ const PageSection1 = () => {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} >
             <Box sx={{padding:"16px", alignItems:"center", }}>
-            <Typography variant="h8">Who are visarzo</Typography>
-            <Typography variant="h4"><b>Not Just Trandtional Visa and Immigration Firm</b></Typography>
-            <Typography variant="h6">Sponsoring and managing work visas parts now becoming results in the experience.</Typography>
-            <Typography variant="h7">The Most Trusted Immigration and Visa Consultant. There are locations in the United states of america as well as internationally. The organization was established in 2000 on the basis of a small idea conceived by its promoters! We assist applicants in navigating the immigration process to any country in which they choose to live.</Typography>
+            <Typography className={classes.Typo} variant="h8">Who are visarzo</Typography>
+            <Typography className={classes.Typo} variant="h4"><b>Not Just Trandtional Visa and Immigration Firm</b></Typography>
+            <Typography className={classes.Typo} variant="h6">Sponsoring and managing work visas parts now becoming results in the experience.</Typography>
+            <Typography className={classes.Typo} variant="h7">The Most Trusted Immigration and Visa Consultant. There are locations in the United states of america as well as internationally. The organization was established in 2000 on the basis of a small idea conceived by its promoters! We assist applicants in navigating the immigration process to any country in which they choose to live.</Typography>
             </Box>
             </Grid>
     </Grid>
@@ -117,7 +121,7 @@ const PageSection1 = () => {
       />
      
       <CardActions sx={{textAlign:"center",display:"flex", justifyContent:"center"}}>
-        <Button sx={{color:"black"}}>Apply Online</Button>
+        <Button sx={{color:"black", fontFamily:"sans-serif"}}>Apply Online</Button>
       
       </CardActions>
     </Card>
@@ -175,13 +179,13 @@ const PageSection1 = () => {
           <Grid xs={12} sm={12} md={12} lg={12} >
             <Grid container sx={{padding:"16px", }}>
               <Grid item xs={12} sm={12} md={6} lg={6} sx={{padding:"26px"}}>
-              <Typography variant='paragraph'>How We Help Clients</Typography>
+              <Typography className={classes.Typo} variant='paragraph'>How We Help Clients</Typography>
 
-               <Typography variant='h3'>Level With Great Visa</Typography>
-               <Typography variant='h3'>Serving Policies</Typography>
+               <Typography className={classes.Typo} variant='h3'>Level With Great Visa</Typography>
+               <Typography className={classes.Typo} variant='h3'>Serving Policies</Typography>
               </Grid>
               <Grid item xs={12} sm={12} md={6} lg={6} sx={{padding:"26px",alignItems:"center", marginTop:"8px"}}>
-                <Typography variant='paragraph'>We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.</Typography>
+                <Typography className={classes.Typo} variant='paragraph'>We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.</Typography>
               </Grid>
             </Grid>
            
