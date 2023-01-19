@@ -18,6 +18,8 @@ import { makeStyles } from "@mui/styles";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+
 const useStyles = makeStyles((theme) => ({
   heroImage: {
     // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
@@ -55,6 +57,36 @@ const useStyles = makeStyles((theme) => ({
   },
   Typo:{
     fontFamily:"sans-serif"
+  },
+  TypoCard:{
+    color:"black",
+     fontFamily:"sans-serif",
+     fontSize:"26px",
+     lineHeight:"32px",
+     fontWeight:"600"
+  },
+  countriesTypo:{
+  
+    fontSize: "12px",
+    lineHeight: "20px",
+    color: "#777777",
+    textTransform: "uppercase",
+    fontWeight: "600",
+    letterSpacing: "1px"
+  },
+  countriesHead:{
+    fontSize: "2.5rem",
+    lineHeight: "57px",
+    color: "black",
+    fontWeight: "700",
+    
+  },
+  ratingText:{
+    fontSize: "0.5rem",
+    lineHeight: "26px",
+    color: "#2d5883",
+    fontWeight: "600",
+    
   }
 
 }));
@@ -121,7 +153,7 @@ const PageSection1 = () => {
       />
      
       <CardActions sx={{textAlign:"center",display:"flex", justifyContent:"center"}}>
-        <Button sx={{color:"black", fontFamily:"sans-serif"}}>Apply Online</Button>
+        <Button  ><Typography className={classes.TypoCard}>Apply Online</Typography></Button>
       
       </CardActions>
     </Card>
@@ -137,7 +169,7 @@ const PageSection1 = () => {
       />
      
       <CardActions sx={{textAlign:"center",display:"flex", justifyContent:"center"}}>
-        <Button sx={{color:"black", }}>Apply Online</Button>
+        <Button ><Typography className={classes.TypoCard}>Apply Online</Typography></Button>
       
       </CardActions>
     </Card>
@@ -153,7 +185,7 @@ const PageSection1 = () => {
       />
      
       <CardActions sx={{textAlign:"center",display:"flex", justifyContent:"center"}}>
-        <Button sx={{color:"black", }}>Apply Online</Button>
+        <Button><Typography className={classes.TypoCard}>Apply Online</Typography></Button>
       
       </CardActions>
     </Card>
@@ -378,9 +410,9 @@ const PageSection1 = () => {
       {/****************************************** Another Card Section ****************************************************/}
       <Grid container>
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{textAlign:"center", padding:"26px"}}>
-          <Typography variant="paragraph">COUNTRIES WE OFFER SUPPORT</Typography>
-          <Typography variant='h3'>Immigration & Visa Services</Typography>
-          <Typography variant='h3'>Following Countries</Typography>
+          <Typography className={classes.countriesTypo}>COUNTRIES WE OFFER SUPPORT</Typography>
+          <Typography className={classes.countriesHead}>Immigration & Visa Services</Typography>
+          <Typography  className={classes.countriesHead}>Following Countries</Typography>
         </Grid>
       </Grid>
       <Grid container spacing={3} padding="26px">
@@ -435,13 +467,13 @@ const PageSection1 = () => {
          <Container>
         <Grid container sx={{padding:"24px"}}>
           <Grid xs={12} sm={12} md={12} lg={12} sx={{textAlign:"center", marginY:"12px"}}>
-          <Typography variant='paragraph'>CLIENTS TESTIMONIALS</Typography>
+          <Typography className={classes.countriesTypo}>CLIENTS TESTIMONIALS</Typography>
 
-          <Typography variant='h3'>What Customers</Typography>
-          <Typography variant='h3'>Saying About Visarzo</Typography>
+          <Typography className={classes.countriesHead}>What Customers</Typography>
+          <Typography className={classes.countriesHead}>Saying About Visarzo</Typography>
           </Grid>
           <Grid xs={12} sm={12} md={12} lg={12}>
-         <OwlCarousel className='owl-theme' loop margin={10} nav>
+         <OwlCarousel className='owl-theme' loop margin={40} autoplay={true} nav>
     <div class='item'>
         <Card sx={{border:"1px solid black "}}>
           <CardContent>
@@ -456,7 +488,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
@@ -477,7 +509,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
@@ -498,7 +530,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
@@ -519,7 +551,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
@@ -540,7 +572,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
@@ -561,7 +593,7 @@ const PageSection1 = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={7} lg={7}>
-                <Typography variant='h6'>Green Card Approved</Typography>
+                <Typography className={classes.ratingText}>Green Card Approved</Typography>
                 <Typography variant='h8'>I'd want to express my gratitude to visarzo and the entire staff, particularly Mr. James Thomas, for assisting me in obtaining my student visa for London University. She helped me to find University.</Typography>
               </Grid>
             </Grid>
