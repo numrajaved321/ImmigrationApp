@@ -2,10 +2,33 @@ import React from 'react'
 import Grid from '@mui/material/Grid';
 import { Container, width } from '@mui/system';
 import Typography from '@mui/material/Typography';
+import Carousel from 'react-bootstrap/Carousel';
+import { Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 const Contact = () => {
   return (
     <>
+ 
+        <div style={{ 
+      backgroundImage: `url("https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/page-title-6.jpg")`, 
+    
+     height:"350px",
+     
+    
+     
+    }}>
+         <Container>
+     <Grid container>
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{alignItems:"bottom"}}>
+          <Typography>Contact Us</Typography>
+          <Typography>Home ----- Contact</Typography>
+        </Grid>
+        </Grid>
+        </Container>
+        
+    </div>
     <Grid container>
      <Grid item xs={12} sm={12} md={12} lg={12}>  
     <Container>

@@ -21,6 +21,8 @@ import InputBase from '@mui/material/InputBase';
 import { makeStyles } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import {
   MemoryRouter,
   Route,
@@ -83,6 +85,14 @@ function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [value, setValue] = React.useState(0);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -163,7 +173,7 @@ useEffect(() => {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
++          >
             MUI
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
@@ -177,10 +187,26 @@ useEffect(() => {
        
         <Tab label={('Home')} value="Home" to="/" component={Link} />
         <Tab label={('Coaching')}  />
-        <Tab label={('About')} />
+        <Tab label={('About')} value="AboutUs" to="/aboutus" component={Link}  onMouseOver={handleClick} />
+        <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        
+        MenuListProps={{
+          onMouseLeave: handleClose,
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose} ><Tab label={('About Us')} value="AboutUs" to="/aboutus" component={Link}/></MenuItem>
+        <MenuItem onClick={handleClose} ><Tab label={('Error 404')} value="Error404" to="/error404" component={Link} /></MenuItem>
+        <MenuItem onClick={handleClose} ><Tab label={('Our Team')} value="OurTeam" to="/ourteam" component={Link} /></MenuItem>
+      </Menu>
         <Tab label={('Service')}  />
         <Tab label={('Contact')} value="Contact" to="/contact" component={Link} />
-        <Tab label={('Blog')} value="Blog" to="/Blog" component={Link} />
+        <Tab label={('Blog')} value="Blog" to="/Blog" component={Link}  />
+    
        
         
         </Tabs>
