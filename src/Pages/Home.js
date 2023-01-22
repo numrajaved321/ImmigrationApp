@@ -11,13 +11,13 @@ import Contact from './Contact'
 const Home = () => {
   return (
     <>
-    <Header/>
+    {/* <Header/>
     <Appbar/>
-    <Navbar/>
-      <Contact/>
-     {/* < PageSection1/>
-     <PageSection2/> */}
-    <Footer/>
+    <Navbar/> */}
+      {/* <Contact/> */}
+     < PageSection1/>
+     <PageSection2/>
+    {/* <Footer/> */}
     </>
   )
 }

@@ -21,6 +21,14 @@ import InputBase from '@mui/material/InputBase';
 import { makeStyles } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import {
+  MemoryRouter,
+  Route,
+  Routes,
+  Link,
+  matchPath,
+  useLocation,
+} from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -74,6 +82,11 @@ const navItems = ['Home', 'About','Coaching', 'Service', 'Blog', 'Contact'];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -111,13 +124,14 @@ useEffect(() => {
           </ListItem>
         ))}
       </List> */}
-       <Tabs  centered    textColor="primary" orientation="vertical"
+       <Tabs  value={value} onChange={handleChange} centered    textColor="primary" orientation="vertical"
         indicatorColor="primary" > 
-        <Tab label={('Tab_1')} />
-        <Tab label={('Tab_2')}  />
-        <Tab label={('Tab_3')} />
-        <Tab label={('Tab_4')} value="dashboard" to="/dashboard" />
-        <Tab label={('Tab_5')} value="login" to="/login"  />
+          <Tab label={('Home')} value="Home" to="/" component={Link} />
+        <Tab label={('Coaching')}  />
+        <Tab label={('About')} />
+        <Tab label={('Service')}  />
+        <Tab label={('Contact')} value="Contact" to="/contact" component={Link} />
+        <Tab label={('Blog')} value="Blog" to="/Blog" component={Link} />
        
         
         </Tabs>
@@ -156,16 +170,17 @@ useEffect(() => {
           <img src='https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/logo-1.png' alt="logo" />
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <Tabs  centered    textColor="white"
+          <Tabs  value={value} onChange={handleChange} centered    textColor="white"
         indicatorColor="primary" > 
       
         
        
-        <Tab label={('Home')} />
+        <Tab label={('Home')} value="Home" to="/" component={Link} />
         <Tab label={('Coaching')}  />
         <Tab label={('About')} />
-        <Tab label={('Service')} value="dashboard" to="#" />
-        <Tab label={('Blog')} value="login" to="/login"  />
+        <Tab label={('Service')}  />
+        <Tab label={('Contact')} value="Contact" to="/contact" component={Link} />
+        <Tab label={('Blog')} value="Blog" to="/Blog" component={Link} />
        
         
         </Tabs>
