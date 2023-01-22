@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import PageSection1 from './PageSection1'
 import PageSection2 from './PageSection2'
+import Contact from './Contact'
 
 
 const Home = () => {
@@ -13,9 +14,9 @@ const Home = () => {
     <Header/>
     <Appbar/>
     <Navbar/>
-
-     < PageSection1/>
-     <PageSection2/>
+      <Contact/>
+     {/* < PageSection1/>
+     <PageSection2/> */}
     <Footer/>
     </>
   )
