@@ -8,6 +8,7 @@ import Blog from './Pages/Blog';
 import AboutUs from './Pages/AboutUs';
 import Error404 from './Pages/Error404';
 import OurTeam from './Pages/OurTeam';
+import Faq from "./Pages/Faq";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
            <Route path='Error404' element={<Error404 /> } />
            <Route path='OurTeam' element={<OurTeam /> } />
            <Route path='AboutUs' element={<AboutUs /> } />
+           <Route path='Faq' element={<Faq /> } />
            <Route path='Contact' element={<Contact /> } />
            <Route path='Blog' element={<Blog /> } />
      

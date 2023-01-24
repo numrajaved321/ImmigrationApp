@@ -201,6 +201,7 @@ useEffect(() => {
       >
         <MenuItem onClick={handleClose} ><Tab label={('About Us')} value="AboutUs" to="/aboutus" component={Link}/></MenuItem>
         <MenuItem onClick={handleClose} ><Tab label={('Error 404')} value="Error404" to="/error404" component={Link} /></MenuItem>
+        <MenuItem onClick={handleClose} ><Tab label={('FAQ')} value="Faq" to="/faq" component={Link} /></MenuItem>
         <MenuItem onClick={handleClose} ><Tab label={('Our Team')} value="OurTeam" to="/ourteam" component={Link} /></MenuItem>
       </Menu>
         <Tab label={('Service')}  />
