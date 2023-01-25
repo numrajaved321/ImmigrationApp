@@ -12,7 +12,7 @@ const Contact = () => {
     <>
  
         <div style={{ 
-      backgroundImage: `url("https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/page-title-6.jpg")`, 
+      backgroundImage: `linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.6) 100%), url("https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/page-title-6.jpg")`, 
     
      height:"350px",
      

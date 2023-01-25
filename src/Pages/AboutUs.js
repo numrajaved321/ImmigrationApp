@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <>
         <div style={{ 
-      backgroundImage: `url("https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/page-title.jpg")`, 
+      backgroundImage: `linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.6) 100%), url("https://visarzo.smartdemowp.com/wp-content/uploads/2020/08/page-title.jpg")`, 
     opacity:"inherit",
      height:"350px",
      
